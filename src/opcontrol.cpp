@@ -18,7 +18,7 @@ static void update_pto(pros::Controller& controller){
         return;
     }
 
-    if (controller.get_digital_new_press(DIGITAL_X)){
+    if (controller.get_digital_new_press(DIGITAL_Y)){
         pto_selected_mode = !pto_default_selected_mode;
     }
 }
@@ -28,6 +28,8 @@ static bool update_intake_high(pros::Controller& controller){
         right_pto.move(-127);
         left_pto.move(-127);
         return true;
+        
+
     }
 
     if (controller.get_digital(DIGITAL_R2)){
@@ -37,7 +39,7 @@ static bool update_intake_high(pros::Controller& controller){
     }
 
     return false;
-}
+}           
 
 static bool update_intake_middle(pros::Controller& controller){
     if (controller.get_digital(DIGITAL_L1)){
@@ -76,7 +78,7 @@ static void update_pto_piston(){
 
 static bool match_loader_state = false;
 static void update_match_loader(pros::Controller& controller){
-    if (!controller.get_digital_new_press(DIGITAL_DOWN)){
+    if (!controller.get_digital_new_press(DIGITAL_LEFT)){
         return;
     }
 
@@ -86,7 +88,7 @@ static void update_match_loader(pros::Controller& controller){
 
 static bool park_state = false;
 static void update_park(pros::Controller& controller){
-    if (!controller.get_digital_new_press(DIGITAL_B)){
+    if (!controller.get_digital_new_press(DIGITAL_X)){
         return;
     }
 
