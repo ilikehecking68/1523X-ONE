@@ -117,7 +117,7 @@ void update_storing(pros::Controller& controller){
     }
 
     if (distance.get_distance() <= 203){
-        low_speed = 0.5;
+        low_speed = 1.0;
         right_pto.move(0);
         return;
     } else {
