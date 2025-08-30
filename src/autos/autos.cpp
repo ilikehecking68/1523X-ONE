@@ -75,4 +75,5 @@ void auto_one_pratham(){
 }
 
 void autonomous(){
+    auto_one_pratham();
 }
