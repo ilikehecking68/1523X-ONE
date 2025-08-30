@@ -19,5 +19,12 @@ inline pros::ADIDigitalOut match_loader('H');
 
 inline pros::ADIDigitalOut park('G');
 
+inline pros::Distance distance(6);
+
+inline pros::ADIDigitalOut odom_raise('F');
+
+inline pros::IMU imu(1);
+
+inline pros::Rotation horiz(1);
 //                                                                                              |
 //-----------------------------------------------------------------------------------------------
